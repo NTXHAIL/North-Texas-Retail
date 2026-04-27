@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hail Damage Repair in North Texas | $0 Out of Pocket | NTX Hail</title>
+<meta name="description" content="Stress-free hail damage repair in DFW. We cover your deductible, work directly with your insurance, and offer free inspections + complimentary rentals. Call (214) 308-5779." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Hail Damage Repair in DFW | $0 Out of Pocket | NTX Hail" />
+<meta property="og:description" content="We cover your deductible and handle your insurance claim from start to finish. Free inspections. Complimentary rentals. Fast turnaround." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.ntxhail.com/hail-damage" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --navy: #050d1a;
+    --navy-2: #0a1628;
+    --navy-3: #0f1f38;
+    --blue: #00a8ff;
+    --blue-soft: rgba(0, 168, 255, 0.12);
+    --amber: #f59e0b;
+    --amber-soft: rgba(245, 158, 11, 0.12);
+    --ink: #e8edf5;
+    --muted: #94a3b8;
+    --line: rgba(255, 255, 255, 0.08);
+    --max: 1200px;
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--navy);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 1.05; }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; border: 0; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  /* ============ STORM ALERT BAR ============ */
+  .alert-bar {
+    background: var(--amber);
+    color: var(--navy);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .alert-bar strong { font-weight: 700; }
+
+  /* ============ NAV ============ */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(5, 13, 26, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+  }
+  .logo img {
+    height: 66px;
+    width: auto;
+    transition: transform 0.2s;
+  }
+  .logo:hover img { transform: scale(1.03); }
+  @media (max-width: 480px) {
+    .logo img { height: 54px; }
+  }
+  .nav-cta {
+    background: var(--blue);
+    color: var(--navy);
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0, 168, 255, 0.3); }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    padding: 80px 0 100px;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(0, 168, 255, 0.18) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(245, 158, 11, 0.10) 0%, transparent 50%),
+      var(--navy);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .hero-grid { grid-template-columns: 1.15fr 1fr; gap: 64px; }
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(0, 168, 255, 0.25);
+    margin-bottom: 24px;
+  }
+  .pill .dot {
+    width: 8px; height: 8px;
+    background: var(--blue);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+  }
+
+  h1 {
+    font-size: clamp(44px, 7vw, 84px);
+    margin-bottom: 20px;
+  }
+  h1 .accent { color: var(--blue); display: block; }
+
+  .lede {
+    font-size: clamp(17px, 2vw, 20px);
+    color: var(--muted);
+    margin-bottom: 32px;
+    max-width: 560px;
+  }
+  .lede strong { color: var(--ink); }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--blue);
+    color: var(--navy);
+    box-shadow: 0 12px 32px rgba(0, 168, 255, 0.25);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(0, 168, 255, 0.4); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid rgba(255,255,255,0.25);
+  }
+  .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+  .btn-amber {
+    background: var(--amber);
+    color: var(--navy);
+    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.25);
+  }
+  .btn-amber:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(245, 158, 11, 0.4); }
+  .btn-block { width: 100%; }
+
+  .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    color: var(--muted);
+    font-size: 14px;
+    align-items: center;
+  }
+  .stars { color: var(--amber); letter-spacing: 1px; }
+
+  /* Hero card visual */
+  .hero-card {
+    position: relative;
+    background: linear-gradient(145deg, var(--navy-2), var(--navy-3));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(145deg, rgba(0,168,255,0.4), transparent 50%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .card-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+  .card-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+  }
+  .card-row:last-of-type { border-bottom: 0; }
+  .card-row .v { color: var(--ink); font-weight: 600; }
+  .card-row .v.good { color: #34d399; }
+  .card-total {
+    margin-top: 16px;
+    padding: 18px;
+    background: var(--blue-soft);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-total .label { color: var(--ink); font-weight: 600; font-size: 15px; }
+  .card-total .amount { font-family: 'Bebas Neue', sans-serif; font-size: 42px; color: var(--blue); }
+
+  /* ============ SECTION SHELL ============ */
+  section { padding: 80px 0; position: relative; }
+  .section-tag {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: clamp(36px, 5vw, 56px);
+    margin-bottom: 16px;
+    max-width: 800px;
+  }
+  .section-lede {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 56px;
+  }
+
+  /* ============ TRUST GRID ============ */
+  .trust { background: var(--navy-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .trust-card {
+    background: var(--navy-3);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+  .trust-card:hover { transform: translateY(-4px); border-color: rgba(0,168,255,0.4); }
+  .trust-icon {
+    width: 44px; height: 44px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+  .trust-card h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0;
+  }
+  .trust-card p { color: var(--muted); font-size: 15px; }
+
+  /* ============ HOW IT WORKS ============ */
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 700px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .steps { grid-template-columns: repeat(4, 1fr); } }
+
+  .step {
+    position: relative;
+    padding: 32px 24px;
+    background: var(--navy-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  .step-num {
+    position: absolute;
+    top: -18px;
+    left: 24px;
+    background: var(--amber);
+    color: var(--navy);
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+  }
+  .step h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    margin: 16px 0 10px;
+    letter-spacing: 0.02em;
+  }
+  .step p { color: var(--muted); font-size: 15px; }
+
+  /* ============ WHY US ============ */
+  .why { background: var(--navy-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 700px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .why-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .why-card {
+    padding: 28px;
+    background: var(--navy);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: all 0.25s;
+  }
+  .why-card:hover {
+    border-color: var(--amber);
+    background: linear-gradient(145deg, var(--navy), rgba(245, 158, 11, 0.04));
+  }
+  .why-card .icon {
+    width: 48px; height: 48px;
+    background: var(--amber-soft);
+    color: var(--amber);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  .why-card h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0;
+  }
+  .why-card p { color: var(--muted); font-size: 15px; }
+
+  /* ============ FAQ ============ */
+  .faq-list {
+    max-width: 800px;
+    display: grid;
+    gap: 12px;
+  }
+  details {
+    background: var(--navy-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 0;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  details[open] { border-color: rgba(0, 168, 255, 0.4); }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 22px 24px;
+    font-weight: 600;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--blue);
+    transition: transform 0.2s;
+    line-height: 1;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details > div {
+    padding: 0 24px 22px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ============ LEAD FORM ============ */
+  .form-section {
+    background:
+      radial-gradient(ellipse at top right, rgba(0, 168, 255, 0.15), transparent 60%),
+      var(--navy-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .form-grid { grid-template-columns: 1fr 1.1fr; gap: 64px; }
+  }
+  .form-card {
+    background: var(--navy);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+  }
+  .form-card h2 { font-size: clamp(30px, 4vw, 40px); margin-bottom: 8px; }
+  .form-card .form-lede { color: var(--muted); margin-bottom: 28px; font-size: 15px; }
+
+  .field { margin-bottom: 16px; }
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    background: var(--navy-2);
+    border: 1.5px solid var(--line);
+    color: var(--ink);
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    background: var(--navy-3);
+  }
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .form-disclaimer {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 14px;
+    line-height: 1.5;
+  }
+
+  .form-aside ul {
+    list-style: none;
+    margin-top: 24px;
+  }
+  .form-aside li {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: flex-start;
+  }
+  .form-aside li:last-child { border-bottom: 0; }
+  .form-aside .check {
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    background: var(--blue);
+    color: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+  .form-aside li strong { display: block; color: var(--ink); margin-bottom: 2px; font-size: 15px; }
+  .form-aside li span { color: var(--muted); font-size: 14px; }
+
+  /* ============ FINAL CTA ============ */
+  .final {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .final::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.12), transparent 60%);
+  }
+  .final-content { position: relative; max-width: 720px; margin: 0 auto; }
+  .final h2 { margin-left: auto; margin-right: auto; }
+  .final .urgent {
+    color: var(--amber);
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  .final-phone {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 8vw, 72px);
+    color: var(--blue);
+    display: inline-block;
+    margin: 16px 0 24px;
+    letter-spacing: 0.02em;
+  }
+  .final-phone:hover { color: var(--ink); }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: #02060d;
+    padding: 40px 0 32px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--blue); }
+  .foot-links { margin-bottom: 16px; }
+  .foot-links a { margin: 0 12px; }
+
+  /* ============ MOBILE STICKY ============ */
+  .mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 100;
+    gap: 8px;
+  }
+  .mobile-cta .btn { flex: 1; padding: 14px; font-size: 14px; }
+  @media (max-width: 700px) {
+    .mobile-cta { display: flex; }
+    body { padding-bottom: 80px; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ALERT BAR -->
+<div class="alert-bar">
+  ⚡ <strong>Recent DFW storms — booking 7–10 days out.</strong> Lock your inspection now.
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.ntxhail.com" class="logo" aria-label="NTX Hail home"><img src="data:image/png;base64,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" alt="NTX Hail — Paintless Dent Repair" /></a>
+    <a href="tel:2143085779" class="nav-cta">📞 (214) 308-5779</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill"><span class="dot"></span>Now Booking — North Texas</div>
+      <h1>
+        Hail Hit Your Car?
+        <span class="accent">$0 Out of Pocket.</span>
+      </h1>
+      <p class="lede">
+        Stress-free hail damage repair in the DFW Metroplex. <strong>We cover your deductible</strong>, handle your insurance claim from start to finish, and get your vehicle looking factory-new — fast.
+      </p>
+      <div class="cta-row">
+        <a href="#inspect" class="btn btn-primary">Get My Free Inspection →</a>
+        <a href="tel:2143085779" class="btn btn-secondary">📞 Call Now</a>
+      </div>
+      <div class="hero-trust">
+        <div><span class="stars">★★★★★</span> 5-Star Rated</div>
+        <div>✔ Licensed &amp; Insured</div>
+        <div>✔ Local DFW Team</div>
+      </div>
+    </div>
+
+    <!-- Visual: Estimate card -->
+    <div class="hero-card">
+      <div class="card-label">Sample Hail Estimate</div>
+      <div class="card-title">2022 Toyota RAV4</div>
+      <div class="card-row"><span>Total Repair Cost</span><span class="v">$4,820.00</span></div>
+      <div class="card-row"><span>Insurance Pays</span><span class="v good">$3,820.00</span></div>
+      <div class="card-row"><span>Your Deductible</span><span class="v">$1,000.00</span></div>
+      <div class="card-row"><span>NTX Hail Covers Deductible</span><span class="v good">−$1,000.00</span></div>
+      <div class="card-total">
+        <span class="label">You Pay</span>
+        <span class="amount">$0</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TRUST ============ -->
+<section class="trust">
+  <div class="wrap">
+    <span class="section-tag">Why DFW trusts us</span>
+    <h2>Local experts. Storm-tested. No surprises.</h2>
+    <p class="section-lede">Born and built in North Texas. We've repaired thousands of vehicles after every major hail event from Denton to Dallas to Fort Worth — and we know exactly how the carriers in this state handle claims.</p>
+
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon">🛡️</div>
+        <h3>Deductible Covered</h3>
+        <p>You don't pay your deductible. We do. That's a real $500–$1,000+ in your pocket.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">📋</div>
+        <h3>Insurance Handled For You</h3>
+        <p>We file, we negotiate, we coordinate the adjuster. You don't have to lift a finger.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">🎯</div>
+        <h3>100% Estimate Accuracy</h3>
+        <p>What we quote is what you get. No surprise charges, no upsells, no hidden line items.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">🚗</div>
+        <h3>Complimentary Rentals</h3>
+        <p>Ask us about complimentary rental cars while your vehicle is in the shop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how">
+  <div class="wrap">
+    <span class="section-tag">How it works</span>
+    <h2>Four simple steps. We do the heavy lifting.</h2>
+    <p class="section-lede">From the first inspection to handing back your keys, every step is designed to be fast, transparent, and zero-hassle.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Free Inspection</h3>
+        <p>We come to you, or you swing by. Honest, on-the-spot damage assessment. Zero pressure, zero cost.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We Help With Your Claims Experience</h3>
+        <p>We coordinate with your insurance company, talk to your adjuster, and lock in accurate pricing.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Expert PDR Repair</h3>
+        <p>Certified technicians restore your panels using paintless dent repair — factory finish, no body filler.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Back on the Road</h3>
+        <p>Pick up your car looking like the storm never happened. Lifetime workmanship guarantee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why">
+  <div class="wrap">
+    <span class="section-tag">Why NTX Hail</span>
+    <h2>The most customer-friendly hail repair in North Texas.</h2>
+    <p class="section-lede">Other shops bill you the deductible. Other shops drag out the insurance back-and-forth. We don't operate that way.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon">💰</div>
+        <h3>Deductible Coverage</h3>
+        <p>We cover your deductible as part of our service. You drive away owing nothing.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">🤝</div>
+        <h3>Insurance Coordination</h3>
+        <p>Direct experience with State Farm, Allstate, GEICO, USAA, Progressive, Farmers, and more.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">📐</div>
+        <h3>Accurate Estimates</h3>
+        <p>Detailed line-item estimates that match the actual repair. What you see is what you pay (which is $0).</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">🚙</div>
+        <h3>Rental Car Assistance</h3>
+        <p>Ask about our complimentary rental cars so you're never without a ride.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">⚡</div>
+        <h3>Fast Turnaround</h3>
+        <p>Most repairs completed in days, not weeks. We respect your time.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">🏆</div>
+        <h3>Lifetime Workmanship</h3>
+        <p>Our paintless dent repair is backed by a lifetime workmanship guarantee. Period.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap">
+    <span class="section-tag">Common questions</span>
+    <h2>Everything you're wondering about.</h2>
+    <p class="section-lede">Quick, honest answers — no fine print, no runaround.</p>
+
+    <div class="faq-list">
+      <details>
+        <summary>Will filing a hail claim raise my insurance rates?</summary>
+        <div>
+          Hail damage falls under the <strong>comprehensive</strong> portion of your auto policy — not collision. Comprehensive claims are considered acts of nature, not driver fault, so most carriers do <strong>not</strong> raise your individual rate for filing one. Always confirm with your specific carrier, but in our experience filing a hail claim is one of the safest claims you can make.
+        </div>
+      </details>
+      <details>
+        <summary>How long does a hail repair take?</summary>
+        <div>
+          Most paintless dent repairs are completed in <strong>3 to 10 business days</strong>, depending on damage severity and parts availability. We'll give you an exact timeline at your free inspection — and a complimentary rental can keep you moving while we work.
+        </div>
+      </details>
+      <details>
+        <summary>Do I really pay nothing out of pocket?</summary>
+        <div>
+          That's right. <strong>We cover your deductible.</strong> Your only contribution is the time it takes to drop off and pick up your vehicle. No hidden fees, no surprise add-ons. The total out-of-pocket cost to you is $0.
+        </div>
+      </details>
+      <details>
+        <summary>What if I've already filed a claim?</summary>
+        <div>
+          Even better — bring us your claim number and the adjuster's contact info, and we'll take it from there. We work directly with your insurance company to complete the process, and you'll still get the same deductible coverage and full-service treatment.
+        </div>
+      </details>
+      <details>
+        <summary>What insurance companies do you work with?</summary>
+        <div>
+          All of them. We have direct experience with State Farm, Allstate, GEICO, Progressive, USAA, Farmers, Liberty Mutual, Nationwide, Travelers, and every other major carrier serving North Texas.
+        </div>
+      </details>
+      <details>
+        <summary>Do you offer free inspections?</summary>
+        <div>
+          Yes — every inspection is 100% free with zero obligation. We can meet you at your home, your office, or you can come to our shop. If your vehicle has hail damage, we'll show you exactly what we see and explain your options.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD FORM ============ -->
+<section id="inspect" class="form-section">
+  <div class="wrap form-grid">
+
+    <div class="form-aside">
+      <span class="section-tag">Get started</span>
+      <h2>Get your free hail damage inspection.</h2>
+      <p class="section-lede">Fill out the form and we'll text or call you within <strong>1 business hour</strong> to schedule your free inspection. Most appointments available same-week.</p>
+
+      <ul>
+        <li>
+          <span class="check">✓</span>
+          <div><strong>Zero out-of-pocket cost</strong><span>We cover your deductible. You pay nothing.</span></div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div><strong>1-hour response time</strong><span>Real humans. Real fast. No bots.</span></div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div><strong>Mobile inspections available</strong><span>We come to your home or office in DFW.</span></div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div><strong>Lifetime workmanship guarantee</strong><span>Our repairs are backed for life.</span></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-card">
+      <h2>Free Inspection Request</h2>
+      <p class="form-lede">Takes 30 seconds. We'll handle the rest.</p>
+
+      <form action="https://formspree.io/f/mnjljryn" method="POST" id="leadForm">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(214) 555-1234" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@email.com" required />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="year">Vehicle Year</label>
+            <input type="text" id="year" name="year" placeholder="2022" required />
+          </div>
+          <div class="field">
+            <label for="makemodel">Make &amp; Model</label>
+            <input type="text" id="makemodel" name="makemodel" placeholder="Toyota RAV4" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="claim">Already Filed a Claim?</label>
+          <select id="claim" name="claim">
+            <option>Not yet</option>
+            <option>Yes — I have a claim number</option>
+            <option>I'm not sure</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-amber btn-block">Get My Free Hail Damage Inspection →</button>
+        <p class="form-disclaimer">By submitting, you agree to be contacted by NTX Hail by phone, text, or email regarding your inspection. Standard rates may apply. We never share your info.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="wrap final-content">
+    <p class="urgent">⚡ Limited availability — recent DFW storms</p>
+    <h2>Don't wait. Insurance claim windows close fast.</h2>
+    <p class="section-lede" style="margin-left:auto;margin-right:auto;">Most carriers give you <strong>12 months or less</strong> to file a hail claim. Get your free inspection now and lock in your spot before our schedule fills up.</p>
+    <a href="tel:2143085779" class="final-phone">(214) 308-5779</a>
+    <div class="cta-row" style="justify-content:center;">
+      <a href="#inspect" class="btn btn-primary">Request Free Inspection</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="https://www.ntxhail.com">Home</a>
+      <a href="tel:2143085779">Call</a>
+      <a href="mailto:team@ntxhail.com">Email</a>
+    </div>
+    <p>NTX Hail • Denton, TX • Serving the DFW Metroplex &amp; North Texas</p>
+    <p style="margin-top:8px;">© <span id="yr"></span> NTX Hail. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-cta">
+  <a href="tel:2143085779" class="btn btn-secondary" style="background:var(--navy-2);">📞 Call</a>
+  <a href="#inspect" class="btn btn-primary">Free Inspection</a>
+</div>
+
+<script>
+  // Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Phone formatting
+  const phone = document.getElementById('phone');
+  if (phone) {
+    phone.addEventListener('input', (e) => {
+      let v = e.target.value.replace(/\D/g, '').slice(0, 10);
+      if (v.length > 6) e.target.value = `(${v.slice(0,3)}) ${v.slice(3,6)}-${v.slice(6)}`;
+      else if (v.length > 3) e.target.value = `(${v.slice(0,3)}) ${v.slice(3)}`;
+      else if (v.length > 0) e.target.value = `(${v}`;
+    });
+  }
+</script>
+
+</body>
+</html>
